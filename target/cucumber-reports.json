@@ -1,0 +1,212 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 12,
+        "name": "Búsqueda de usuario por id",
+        "description": "",
+        "id": "probar-la-búsqueda-de-usuario-por-id;búsqueda-de-usuario-por-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 45601600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3477099800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "busco un usuario por el id 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginSteps.enterSearchCriteria(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 705049800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "el resultado del nombre deberia ser Manuel",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Manuel",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginSteps.validateResults(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Búsqueda de usuario por id",
+        "description": "",
+        "id": "probar-la-búsqueda-de-usuario-por-id;búsqueda-de-usuario-por-id;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 418400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 118509000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "busco un usuario por el id 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginSteps.enterSearchCriteria(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14278800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "el resultado del nombre deberia ser Margrith",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Margrith",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginSteps.validateResults(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Búsqueda de usuario por id",
+        "description": "",
+        "id": "probar-la-búsqueda-de-usuario-por-id;búsqueda-de-usuario-por-id;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 215100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 97755100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "busco un usuario por el id 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginSteps.enterSearchCriteria(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: El nombre no coincide con el id del usuario expected:\u003c[usuario no encontrado]\u003e but was:\u003c[manuel]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat steps.LoginSteps.validateResults(LoginSteps.java:36)\r\n\tat ✽.el resultado del nombre deberia ser USUARIO NO ENCONTRADO(src/test/resources/features/Login.feature:9)\r\n",
+              "duration": 17949600,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "el resultado del nombre deberia ser USUARIO NO ENCONTRADO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "USUARIO NO ENCONTRADO",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginSteps.validateResults(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          }
+        ]
+      }
+    ],
+    "name": "Probar la búsqueda de usuario por id",
+    "description": "",
+    "id": "probar-la-búsqueda-de-usuario-por-id",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@Test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
