@@ -1,18 +1,503 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 12,
-        "name": "Búsqueda de usuario por id",
+        "line": 10,
+        "name": "Registrar una transacción",
         "description": "",
-        "id": "probar-la-búsqueda-de-usuario-por-id;búsqueda-de-usuario-por-id;;2",
+        "id": "probar-las-posibles-transacciones-en-el-sistema;registrar-una-transacción;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 40152000,
+              "duration": 72570700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario empleado ya está logeado",
+            "match": {
+              "location": "ActionSteps.employeeLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1731579700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Se registra una accion con los atributos id_usuario: 68, id_action: 5, id_product: 5, quantity: 13, state: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "68",
+                  "offset": 53
+                },
+                {
+                  "val": "5",
+                  "offset": 68
+                },
+                {
+                  "val": "5",
+                  "offset": 83
+                },
+                {
+                  "val": "13",
+                  "offset": 96
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 107
+                }
+              ],
+              "location": "ActionSteps.enterActionAtributes(int,int,int,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 448554600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el resultado de deberia ser SUCCESS al registrar accion",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SUCCESS",
+                  "offset": 28
+                }
+              ],
+              "location": "ActionSteps.validateRecordAction(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RecordAction"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Registrar una transacción",
+        "description": "",
+        "id": "probar-las-posibles-transacciones-en-el-sistema;registrar-una-transacción;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 900200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario empleado ya está logeado",
+            "match": {
+              "location": "ActionSteps.employeeLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 312161600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Se registra una accion con los atributos id_usuario: 68, id_action: 6, id_product: 5, quantity: 64, state: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "68",
+                  "offset": 53
+                },
+                {
+                  "val": "6",
+                  "offset": 68
+                },
+                {
+                  "val": "5",
+                  "offset": 83
+                },
+                {
+                  "val": "64",
+                  "offset": 96
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 107
+                }
+              ],
+              "location": "ActionSteps.enterActionAtributes(int,int,int,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10909100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el resultado de deberia ser ERROR al registrar accion",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 28
+                }
+              ],
+              "location": "ActionSteps.validateRecordAction(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RecordAction"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Registrar una transacción",
+        "description": "",
+        "id": "probar-las-posibles-transacciones-en-el-sistema;registrar-una-transacción;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 829600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario empleado ya está logeado",
+            "match": {
+              "location": "ActionSteps.employeeLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 108744100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Se registra una accion con los atributos id_usuario: 8974585, id_action: 4, id_product: 5, quantity: 4, state: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8974585",
+                  "offset": 53
+                },
+                {
+                  "val": "4",
+                  "offset": 73
+                },
+                {
+                  "val": "5",
+                  "offset": 88
+                },
+                {
+                  "val": "4",
+                  "offset": 101
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 111
+                }
+              ],
+              "location": "ActionSteps.enterActionAtributes(int,int,int,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9864100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el resultado de deberia ser ERROR al registrar accion",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 28
+                }
+              ],
+              "location": "ActionSteps.validateRecordAction(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RecordAction"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Registrar una transacción",
+        "description": "",
+        "id": "probar-las-posibles-transacciones-en-el-sistema;registrar-una-transacción;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 751900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario empleado ya está logeado",
+            "match": {
+              "location": "ActionSteps.employeeLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 332841900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Se registra una accion con los atributos id_usuario: 68, id_action: 46, id_product: 5, quantity: 2, state: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "68",
+                  "offset": 53
+                },
+                {
+                  "val": "46",
+                  "offset": 68
+                },
+                {
+                  "val": "5",
+                  "offset": 84
+                },
+                {
+                  "val": "2",
+                  "offset": 97
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 107
+                }
+              ],
+              "location": "ActionSteps.enterActionAtributes(int,int,int,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8385600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el resultado de deberia ser ERROR al registrar accion",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 28
+                }
+              ],
+              "location": "ActionSteps.validateRecordAction(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RecordAction"
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Registrar una transacción",
+        "description": "",
+        "id": "probar-las-posibles-transacciones-en-el-sistema;registrar-una-transacción;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1064500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario empleado ya está logeado",
+            "match": {
+              "location": "ActionSteps.employeeLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 304984800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Se registra una accion con los atributos id_usuario: 68, id_action: 6, id_product: 5000000, quantity: 2, state: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "68",
+                  "offset": 53
+                },
+                {
+                  "val": "6",
+                  "offset": 68
+                },
+                {
+                  "val": "5000000",
+                  "offset": 83
+                },
+                {
+                  "val": "2",
+                  "offset": 102
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 112
+                }
+              ],
+              "location": "ActionSteps.enterActionAtributes(int,int,int,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9295800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el resultado de deberia ser ERROR al registrar accion",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 28
+                }
+              ],
+              "location": "ActionSteps.validateRecordAction(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RecordAction"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Registrar una transacción",
+        "description": "",
+        "id": "probar-las-posibles-transacciones-en-el-sistema;registrar-una-transacción;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 638100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario empleado ya está logeado",
+            "match": {
+              "location": "ActionSteps.employeeLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 308154800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Se registra una accion con los atributos id_usuario: 68, id_action: 6, id_product: 5, quantity: 50000000, state: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "68",
+                  "offset": 53
+                },
+                {
+                  "val": "6",
+                  "offset": 68
+                },
+                {
+                  "val": "5",
+                  "offset": 83
+                },
+                {
+                  "val": "50000000",
+                  "offset": 96
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 113
+                }
+              ],
+              "location": "ActionSteps.enterActionAtributes(int,int,int,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10844900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el resultado de deberia ser ERROR al registrar accion",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 28
+                }
+              ],
+              "location": "ActionSteps.validateRecordAction(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RecordAction"
+          }
+        ]
+      }
+    ],
+    "name": "Probar las posibles transacciones en el sistema",
+    "description": "",
+    "id": "probar-las-posibles-transacciones-en-el-sistema",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Actions.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 12,
+        "name": "Búsqueda de usuario por id",
+        "description": "",
+        "id": "probar-crud-de-usuarios;búsqueda-de-usuario-por-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 667700,
               "status": "passed"
             },
             "line": 7,
@@ -24,9 +509,8 @@
           },
           {
             "result": {
-              "error_message": "java.net.ConnectException: Connection refused: connect\r\n\tat java.base/sun.nio.ch.Net.connect0(Native Method)\r\n\tat java.base/sun.nio.ch.Net.connect(Net.java:579)\r\n\tat java.base/sun.nio.ch.Net.connect(Net.java:568)\r\n\tat java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)\r\n\tat java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)\r\n\tat java.base/java.net.Socket.connect(Socket.java:633)\r\n\tat org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)\r\n\tat io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)\r\n\tat io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)\r\n\tat ✽.busco un usuario por el id 3(src/test/resources/features/Login.feature:8)\r\n",
-              "duration": 1245431100,
-              "status": "failed"
+              "duration": 131681500,
+              "status": "passed"
             },
             "line": 8,
             "name": "busco un usuario por el id 3",
@@ -43,8 +527,8 @@
           },
           {
             "result": {
-              "duration": 676100,
-              "status": "skipped"
+              "duration": 10878000,
+              "status": "passed"
             },
             "line": 9,
             "name": "el resultado del nombre deberia ser Manuel",
@@ -62,7 +546,7 @@
         ],
         "tags": [
           {
-            "name": "@Test"
+            "name": "@GetUserById"
           }
         ]
       },
@@ -70,13 +554,13 @@
         "line": 13,
         "name": "Búsqueda de usuario por id",
         "description": "",
-        "id": "probar-la-búsqueda-de-usuario-por-id;búsqueda-de-usuario-por-id;;3",
+        "id": "probar-crud-de-usuarios;búsqueda-de-usuario-por-id;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 359000,
+              "duration": 1106800,
               "status": "passed"
             },
             "line": 7,
@@ -88,9 +572,8 @@
           },
           {
             "result": {
-              "error_message": "java.net.ConnectException: Connection refused: connect\r\n\tat java.base/sun.nio.ch.Net.connect0(Native Method)\r\n\tat java.base/sun.nio.ch.Net.connect(Net.java:579)\r\n\tat java.base/sun.nio.ch.Net.connect(Net.java:568)\r\n\tat java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)\r\n\tat java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)\r\n\tat java.base/java.net.Socket.connect(Socket.java:633)\r\n\tat org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)\r\n\tat io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)\r\n\tat ✽.busco un usuario por el id 4(src/test/resources/features/Login.feature:8)\r\n",
-              "duration": 13127700,
-              "status": "failed"
+              "duration": 109314700,
+              "status": "passed"
             },
             "line": 8,
             "name": "busco un usuario por el id 4",
@@ -107,8 +590,8 @@
           },
           {
             "result": {
-              "duration": 183300,
-              "status": "skipped"
+              "duration": 11301400,
+              "status": "passed"
             },
             "line": 9,
             "name": "el resultado del nombre deberia ser Margrith",
@@ -126,7 +609,7 @@
         ],
         "tags": [
           {
-            "name": "@Test"
+            "name": "@GetUserById"
           }
         ]
       },
@@ -134,13 +617,13 @@
         "line": 14,
         "name": "Búsqueda de usuario por id",
         "description": "",
-        "id": "probar-la-búsqueda-de-usuario-por-id;búsqueda-de-usuario-por-id;;4",
+        "id": "probar-crud-de-usuarios;búsqueda-de-usuario-por-id;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 184200,
+              "duration": 504700,
               "status": "passed"
             },
             "line": 7,
@@ -152,16 +635,15 @@
           },
           {
             "result": {
-              "error_message": "java.net.ConnectException: Connection refused: connect\r\n\tat java.base/sun.nio.ch.Net.connect0(Native Method)\r\n\tat java.base/sun.nio.ch.Net.connect(Net.java:579)\r\n\tat java.base/sun.nio.ch.Net.connect(Net.java:568)\r\n\tat java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)\r\n\tat java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)\r\n\tat java.base/java.net.Socket.connect(Socket.java:633)\r\n\tat org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)\r\n\tat io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)\r\n\tat io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:577)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\r\n\tat groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)\r\n\tat ✽.busco un usuario por el id 1(src/test/resources/features/Login.feature:8)\r\n",
-              "duration": 9545800,
-              "status": "failed"
+              "duration": 121120200,
+              "status": "passed"
             },
             "line": 8,
-            "name": "busco un usuario por el id 1",
+            "name": "busco un usuario por el id 999999",
             "match": {
               "arguments": [
                 {
-                  "val": "1",
+                  "val": "999999",
                   "offset": 27
                 }
               ],
@@ -171,8 +653,8 @@
           },
           {
             "result": {
-              "duration": 200500,
-              "status": "skipped"
+              "duration": 21448700,
+              "status": "passed"
             },
             "line": 9,
             "name": "el resultado del nombre deberia ser USUARIO NO ENCONTRADO",
@@ -190,25 +672,909 @@
         ],
         "tags": [
           {
-            "name": "@Test"
+            "name": "@GetUserById"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Búsqueda de usuario por id",
+        "description": "",
+        "id": "probar-crud-de-usuarios;búsqueda-de-usuario-por-id;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 435500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 149070600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "busco un usuario por el id -1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-1",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginSteps.enterSearchCriteria(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21904900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "el resultado del nombre deberia ser ERROR AL OBTENER USUARIO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR AL OBTENER USUARIO",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginSteps.validateResults(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetUserById"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 458100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 741217800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: \u003crandom_email\u003e,  prueba,  prueba,  CC,  123123123,  Prueba, prueba, 1, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003crandom_email\u003e",
+                  "offset": 35
+                },
+                {
+                  "val": "prueba",
+                  "offset": 52
+                },
+                {
+                  "val": "prueba",
+                  "offset": 61
+                },
+                {
+                  "val": "CC",
+                  "offset": 70
+                },
+                {
+                  "val": " 123123123",
+                  "offset": 74
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 87
+                },
+                {
+                  "val": "prueba",
+                  "offset": 95
+                },
+                {
+                  "val": "1",
+                  "offset": 103
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 106
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8218700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser SUCCESS al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SUCCESS",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 619100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 120122500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: pruebaprueba,  prueba,  prueba,  CC,  123123123,  Prueba, prueba, 1, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pruebaprueba",
+                  "offset": 35
+                },
+                {
+                  "val": "prueba",
+                  "offset": 50
+                },
+                {
+                  "val": "prueba",
+                  "offset": 59
+                },
+                {
+                  "val": "CC",
+                  "offset": 68
+                },
+                {
+                  "val": " 123123123",
+                  "offset": 72
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 85
+                },
+                {
+                  "val": "prueba",
+                  "offset": 93
+                },
+                {
+                  "val": "1",
+                  "offset": 101
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 104
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6964600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser ERROR al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 559600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 107859200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: \u003crandom_email\u003e,  prueba,  prueba,  CCC,  123123123,  Prueba, prueba, 1, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003crandom_email\u003e",
+                  "offset": 35
+                },
+                {
+                  "val": "prueba",
+                  "offset": 52
+                },
+                {
+                  "val": "prueba",
+                  "offset": 61
+                },
+                {
+                  "val": "CCC",
+                  "offset": 70
+                },
+                {
+                  "val": " 123123123",
+                  "offset": 75
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 88
+                },
+                {
+                  "val": "prueba",
+                  "offset": 96
+                },
+                {
+                  "val": "1",
+                  "offset": 104
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 107
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7265300,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser ERROR al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 357800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 83541800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: \u003crandom_email\u003e,  !!*#$prueba,  prueba,  TI,  1231231231231231312312313123123123123123234242343243242343242432442342342342343243242342343242343243242344234,  Prueba, prueba, 1, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003crandom_email\u003e",
+                  "offset": 35
+                },
+                {
+                  "val": "!!*#$prueba",
+                  "offset": 52
+                },
+                {
+                  "val": "prueba",
+                  "offset": 66
+                },
+                {
+                  "val": "TI",
+                  "offset": 75
+                },
+                {
+                  "val": " 1231231231231231312312313123123123123123234242343243242343242432442342342342343243242342343242343243242344234",
+                  "offset": 79
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 192
+                },
+                {
+                  "val": "prueba",
+                  "offset": 200
+                },
+                {
+                  "val": "1",
+                  "offset": 208
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 211
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7777000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser ERROR al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 361000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 86742100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: \u003crandom_email\u003e,  \u003cnull\u003e,  prueba,  CCCC,  123123123,  Prueba, prueba, 1, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003crandom_email\u003e",
+                  "offset": 35
+                },
+                {
+                  "val": "\u003cnull\u003e",
+                  "offset": 52
+                },
+                {
+                  "val": "prueba",
+                  "offset": 61
+                },
+                {
+                  "val": "CCCC",
+                  "offset": 70
+                },
+                {
+                  "val": " 123123123",
+                  "offset": 76
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 89
+                },
+                {
+                  "val": "prueba",
+                  "offset": 97
+                },
+                {
+                  "val": "1",
+                  "offset": 105
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 108
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14658800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser ERROR al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 374700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 527799300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: \u003crandom_email\u003e,  prueba,  prueba,  TI,  123123123,  Prueba, prueba, 15, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003crandom_email\u003e",
+                  "offset": 35
+                },
+                {
+                  "val": "prueba",
+                  "offset": 52
+                },
+                {
+                  "val": "prueba",
+                  "offset": 61
+                },
+                {
+                  "val": "TI",
+                  "offset": 70
+                },
+                {
+                  "val": " 123123123",
+                  "offset": 74
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 87
+                },
+                {
+                  "val": "prueba",
+                  "offset": 95
+                },
+                {
+                  "val": "15",
+                  "offset": 103
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 107
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6670700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser ERROR al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "Creacion de usuario",
+        "description": "",
+        "id": "probar-crud-de-usuarios;creacion-de-usuario;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 310900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "El usuario administrador ya está logeado",
+            "match": {
+              "location": "LoginSteps.login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 382549500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Creo un usuario con los atributos: \u003crandom_email\u003e,  prueba,  prueba,  CC,  123123123,  Prueba, prueba, 12, pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003crandom_email\u003e",
+                  "offset": 35
+                },
+                {
+                  "val": "prueba",
+                  "offset": 52
+                },
+                {
+                  "val": "prueba",
+                  "offset": 61
+                },
+                {
+                  "val": "CC",
+                  "offset": 70
+                },
+                {
+                  "val": " 123123123",
+                  "offset": 74
+                },
+                {
+                  "val": "Prueba",
+                  "offset": 87
+                },
+                {
+                  "val": "prueba",
+                  "offset": 95
+                },
+                {
+                  "val": "12",
+                  "offset": 103
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 107
+                }
+              ],
+              "location": "LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6648900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "el resultado de la accion deberia ser ERROR al crear usuario",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateCreateUser(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "login",
+        "description": "",
+        "id": "probar-crud-de-usuarios;login;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 679950700,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "ingreso las credenciales email: prueba@prueba, contraseña: prueba",
+            "match": {
+              "arguments": [
+                {
+                  "val": "prueba@prueba",
+                  "offset": 32
+                },
+                {
+                  "val": "prueba",
+                  "offset": 59
+                }
+              ],
+              "location": "LoginSteps.enterCredentials(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7388700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "el resultado de la accion deberia ser SUCCESS al logearse",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SUCCESS",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateLogin(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "login",
+        "description": "",
+        "id": "probar-crud-de-usuarios;login;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 105826800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "ingreso las credenciales email: prueba@prueba, contraseña: pruebas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "prueba@prueba",
+                  "offset": 32
+                },
+                {
+                  "val": "pruebas",
+                  "offset": 59
+                }
+              ],
+              "location": "LoginSteps.enterCredentials(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6417200,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "el resultado de la accion deberia ser ERROR al logearse",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateLogin(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "login",
+        "description": "",
+        "id": "probar-crud-de-usuarios;login;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 102402000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "ingreso las credenciales email: prueba@prueba, contraseña: pasdsadsadasdadasdasasdasdasdasdsadadsadsadsadasdasdasdasdasdasdasdasdaddasda13123123asdasdasdasdasdasdrueba",
+            "match": {
+              "arguments": [
+                {
+                  "val": "prueba@prueba",
+                  "offset": 32
+                },
+                {
+                  "val": "pasdsadsadasdadasdasasdasdasdasdsadadsadsadsadasdasdasdasdasdasdasdasdaddasda13123123asdasdasdasdasdasdrueba",
+                  "offset": 59
+                }
+              ],
+              "location": "LoginSteps.enterCredentials(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7847500,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "el resultado de la accion deberia ser ERROR al logearse",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ERROR",
+                  "offset": 38
+                }
+              ],
+              "location": "LoginSteps.validateLogin(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
           }
         ]
       }
     ],
-    "name": "Probar la búsqueda de usuario por id",
+    "name": "Probar CRUD de Usuarios",
     "description": "",
-    "id": "probar-la-búsqueda-de-usuario-por-id",
+    "id": "probar-crud-de-usuarios",
     "keyword": "Feature",
     "uri": "src/test/resources/features/Login.feature",
-    "tags": [
-      {
-        "name": "@Test",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "tags": []
   }
 ]

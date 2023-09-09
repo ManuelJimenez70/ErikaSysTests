@@ -36,7 +36,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -46,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 4, 2023 01:36:15 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 9, 2023 02:24:14 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -62,8 +61,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -75,7 +72,10 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Test</a></li>
+					<li><a href='#'>@RecordAction</a></li>
+					<li><a href='#'>@GetUserById</a></li>
+					<li><a href='#'>@CreateUser</a></li>
+					<li><a href='#'>@Login</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -116,10 +116,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -130,10 +130,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>20</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>3</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -144,10 +144,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>3</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>57</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>3</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -165,11 +165,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Probar la búsqueda de usuario por id</span>
-						<span class='test-time'>Sep 4, 2023 01:36:15 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Probar las posibles transacciones en el sistema</span>
+						<span class='test-time'>Sep 9, 2023 02:24:15 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -178,373 +178,392 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenariooutline node' test-id='2' status='fail'>
-    <span class='duration right label'>0h 0m 1s+303ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@RecordAction</span>
+    </div>
+    <span class='duration right label'>0h 0m 3s+649ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: Búsqueda de usuario por id</div>
-        <table class='runtime-table table-striped table'><tr><td>search</td><td>result</td></tr><tr><td>3</td><td>Manuel</td></tr><tr><td>4</td><td>Margrith</td></tr><tr><td>1</td><td>USUARIO NO ENCONTRADO</td></tr></table>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Registrar una transacción</div>
+        <table class='runtime-table table-striped table'><tr><td>id_usuario</td><td>id_action</td><td>id_product</td><td>quantity</td><td>state</td><td>result</td></tr><tr><td>68</td><td>5</td><td>5</td><td>13</td><td>pruebas</td><td>SUCCESS</td></tr><tr><td>68</td><td>6</td><td>5</td><td>64</td><td>pruebas</td><td>ERROR</td></tr><tr><td>8974585</td><td>4</td><td>5</td><td>4</td><td>pruebas</td><td>ERROR</td></tr><tr><td>68</td><td>46</td><td>5</td><td>2</td><td>pruebas</td><td>ERROR</td></tr><tr><td>68</td><td>6</td><td>5000000</td><td>2</td><td>pruebas</td><td>ERROR</td></tr><tr><td>68</td><td>6</td><td>5</td><td>50000000</td><td>pruebas</td><td>ERROR</td></tr></table>
     </div>
     <ul class='steps'>
-        <li test-id='3' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Búsqueda de usuario por id</div>
+        <li test-id='3' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Registrar una transacción</div>
             <ul class='gc steps'>
                     <li test-id='4' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                        <h6 class="step-name" title="ActionSteps.employeeLogin()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario empleado ya está logeado</h6>
                             <div class="node-step"></div>
                     </li>
-                    <li test-id='5' class='gc when fail' status='fail'>
-                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When busco un usuario por el id 3</h6>
-                            <textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)
-	at ✽.busco un usuario por el id 3(src/test/resources/features/Login.feature:8)
-</textarea>
-                                                </li>
-                    <li test-id='6' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then el resultado del nombre deberia ser Manuel</h6>
-                            <div class="node-step">Step skipped</div>
+                    <li test-id='5' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.enterActionAtributes(int,int,int,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se registra una accion con los atributos id_usuario: 68, id_action: 5, id_product: 5, quantity: 13, state: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='6' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.validateRecordAction(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de deberia ser SUCCESS al registrar accion</h6>
+                            <div class="node-step"></div>
                     </li>
             </ul>
         </li>
-        <li test-id='7' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Búsqueda de usuario por id</div>
+        <li test-id='7' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Registrar una transacción</div>
             <ul class='gc steps'>
                     <li test-id='8' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                        <h6 class="step-name" title="ActionSteps.employeeLogin()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario empleado ya está logeado</h6>
                             <div class="node-step"></div>
                     </li>
-                    <li test-id='9' class='gc when fail' status='fail'>
-                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When busco un usuario por el id 4</h6>
-                            <textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)
-	at ✽.busco un usuario por el id 4(src/test/resources/features/Login.feature:8)
-</textarea>
-                                                </li>
-                    <li test-id='10' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then el resultado del nombre deberia ser Margrith</h6>
-                            <div class="node-step">Step skipped</div>
+                    <li test-id='9' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.enterActionAtributes(int,int,int,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se registra una accion con los atributos id_usuario: 68, id_action: 6, id_product: 5, quantity: 64, state: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='10' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.validateRecordAction(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de deberia ser ERROR al registrar accion</h6>
+                            <div class="node-step"></div>
                     </li>
             </ul>
         </li>
-        <li test-id='11' class='node scenario fail' status='fail'>
-            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Búsqueda de usuario por id</div>
+        <li test-id='11' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Registrar una transacción</div>
             <ul class='gc steps'>
                     <li test-id='12' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.employeeLogin()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario empleado ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='13' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.enterActionAtributes(int,int,int,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se registra una accion con los atributos id_usuario: 8974585, id_action: 4, id_product: 5, quantity: 4, state: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='14' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.validateRecordAction(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de deberia ser ERROR al registrar accion</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='15' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Registrar una transacción</div>
+            <ul class='gc steps'>
+                    <li test-id='16' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.employeeLogin()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario empleado ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='17' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.enterActionAtributes(int,int,int,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se registra una accion con los atributos id_usuario: 68, id_action: 46, id_product: 5, quantity: 2, state: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='18' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.validateRecordAction(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de deberia ser ERROR al registrar accion</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='19' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Registrar una transacción</div>
+            <ul class='gc steps'>
+                    <li test-id='20' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.employeeLogin()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario empleado ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='21' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.enterActionAtributes(int,int,int,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se registra una accion con los atributos id_usuario: 68, id_action: 6, id_product: 5000000, quantity: 2, state: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='22' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.validateRecordAction(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de deberia ser ERROR al registrar accion</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='23' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Registrar una transacción</div>
+            <ul class='gc steps'>
+                    <li test-id='24' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.employeeLogin()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario empleado ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='25' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.enterActionAtributes(int,int,int,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se registra una accion con los atributos id_usuario: 68, id_action: 6, id_product: 5, quantity: 50000000, state: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='26' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="ActionSteps.validateRecordAction(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de deberia ser ERROR al registrar accion</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Probar CRUD de Usuarios</span>
+						<span class='test-time'>Sep 9, 2023 02:24:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenariooutline node' test-id='28' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@GetUserById</span>
+    </div>
+    <span class='duration right label'>0h 0m 0s+585ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Búsqueda de usuario por id</div>
+        <table class='runtime-table table-striped table'><tr><td>search</td><td>result</td></tr><tr><td>3</td><td>Manuel</td></tr><tr><td>4</td><td>Margrith</td></tr><tr><td>999999</td><td>USUARIO NO ENCONTRADO</td></tr><tr><td>-1</td><td>ERROR AL OBTENER USUARIO</td></tr></table>
+    </div>
+    <ul class='steps'>
+        <li test-id='29' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Búsqueda de usuario por id</div>
+            <ul class='gc steps'>
+                    <li test-id='30' class='gc given pass' status='pass'>
                         <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
                             <div class="node-step"></div>
                     </li>
-                    <li test-id='13' class='gc when fail' status='fail'>
-                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When busco un usuario por el id 1</h6>
-                            <textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)
-	at ✽.busco un usuario por el id 1(src/test/resources/features/Login.feature:8)
-</textarea>
-                                                </li>
-                    <li test-id='14' class='gc then skip' status='skip'>
-                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then el resultado del nombre deberia ser USUARIO NO ENCONTRADO</h6>
-                            <div class="node-step">Step skipped</div>
+                    <li test-id='31' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When busco un usuario por el id 3</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='32' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado del nombre deberia ser Manuel</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='33' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Búsqueda de usuario por id</div>
+            <ul class='gc steps'>
+                    <li test-id='34' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='35' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When busco un usuario por el id 4</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='36' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado del nombre deberia ser Margrith</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='37' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Búsqueda de usuario por id</div>
+            <ul class='gc steps'>
+                    <li test-id='38' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='39' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When busco un usuario por el id 999999</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='40' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado del nombre deberia ser USUARIO NO ENCONTRADO</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='41' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Búsqueda de usuario por id</div>
+            <ul class='gc steps'>
+                    <li test-id='42' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='43' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterSearchCriteria(int)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When busco un usuario por el id -1</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='44' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateResults(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado del nombre deberia ser ERROR AL OBTENER USUARIO</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class='scenariooutline node' test-id='45' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@CreateUser</span>
+    </div>
+    <span class='duration right label'>0h 0m 2s+121ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Creacion de usuario</div>
+        <table class='runtime-table table-striped table'><tr><td>email</td><td>name</td><td>lastName</td><td>typeDocument</td><td>document_number</td><td>direction</td><td>password</td><td>roles</td><td>state</td><td>result</td></tr><tr><td><random_email></td><td>prueba</td><td>prueba</td><td>CC</td><td>123123123</td><td>Prueba</td><td>prueba</td><td>1</td><td>pruebas</td><td>SUCCESS</td></tr><tr><td>pruebaprueba</td><td>prueba</td><td>prueba</td><td>CC</td><td>123123123</td><td>Prueba</td><td>prueba</td><td>1</td><td>pruebas</td><td>ERROR</td></tr><tr><td><random_email></td><td>prueba</td><td>prueba</td><td>CCC</td><td>123123123</td><td>Prueba</td><td>prueba</td><td>1</td><td>pruebas</td><td>ERROR</td></tr><tr><td><random_email></td><td>!!*#$prueba</td><td>prueba</td><td>TI</td><td>1231231231231231312312313123123123123123234242343243242343242432442342342342343243242342343242343243242344234</td><td>Prueba</td><td>prueba</td><td>1</td><td>pruebas</td><td>ERROR</td></tr><tr><td><random_email></td><td><null></td><td>prueba</td><td>CCCC</td><td>123123123</td><td>Prueba</td><td>prueba</td><td>1</td><td>pruebas</td><td>ERROR</td></tr><tr><td><random_email></td><td>prueba</td><td>prueba</td><td>TI</td><td>123123123</td><td>Prueba</td><td>prueba</td><td>15</td><td>pruebas</td><td>ERROR</td></tr><tr><td><random_email></td><td>prueba</td><td>prueba</td><td>CC</td><td>123123123</td><td>Prueba</td><td>prueba</td><td>12</td><td>pruebas</td><td>ERROR</td></tr></table>
+    </div>
+    <ul class='steps'>
+        <li test-id='46' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='47' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='48' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: <random_email>,  prueba,  prueba,  CC,  123123123,  Prueba, prueba, 1, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='49' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser SUCCESS al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='50' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='51' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='52' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: pruebaprueba,  prueba,  prueba,  CC,  123123123,  Prueba, prueba, 1, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='53' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='54' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='55' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='56' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: <random_email>,  prueba,  prueba,  CCC,  123123123,  Prueba, prueba, 1, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='57' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='58' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='59' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='60' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: <random_email>,  !!*#$prueba,  prueba,  TI,  1231231231231231312312313123123123123123234242343243242343242432442342342342343243242342343242343243242344234,  Prueba, prueba, 1, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='61' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='62' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='63' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='64' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: <random_email>,  <null>,  prueba,  CCCC,  123123123,  Prueba, prueba, 1, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='65' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='66' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='67' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='68' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: <random_email>,  prueba,  prueba,  TI,  123123123,  Prueba, prueba, 15, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='69' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='70' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Creacion de usuario</div>
+            <ul class='gc steps'>
+                    <li test-id='71' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.login()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given El usuario administrador ya está logeado</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='72' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterUserAtributes(String,String,String,String,String,String,String,int,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Creo un usuario con los atributos: <random_email>,  prueba,  prueba,  CC,  123123123,  Prueba, prueba, 12, pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='73' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateCreateUser(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al crear usuario</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class='scenariooutline node' test-id='74' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@Login</span>
+    </div>
+    <span class='duration right label'>0h 0m 0s+911ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: login</div>
+        <table class='runtime-table table-striped table'><tr><td>email</td><td>password</td><td>result</td></tr><tr><td>prueba@prueba</td><td>prueba</td><td>SUCCESS</td></tr><tr><td>prueba@prueba</td><td>pruebas</td><td>ERROR</td></tr><tr><td>prueba@prueba</td><td>pasdsadsadasdadasdasasdasdasdasdsadadsadsadsadasdasdasdasdasdasdasdasdaddasda13123123asdasdasdasdasdasdrueba</td><td>ERROR</td></tr></table>
+    </div>
+    <ul class='steps'>
+        <li test-id='75' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>login</div>
+            <ul class='gc steps'>
+                    <li test-id='76' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterCredentials(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When ingreso las credenciales email: prueba@prueba, contraseña: prueba</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='77' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateLogin(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser SUCCESS al logearse</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='78' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>login</div>
+            <ul class='gc steps'>
+                    <li test-id='79' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterCredentials(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When ingreso las credenciales email: prueba@prueba, contraseña: pruebas</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='80' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateLogin(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al logearse</h6>
+                            <div class="node-step"></div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='81' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>login</div>
+            <ul class='gc steps'>
+                    <li test-id='82' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.enterCredentials(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When ingreso las credenciales email: prueba@prueba, contraseña: pasdsadsadasdadasdasasdasdasdasdsadadsadsadsadasdasdasdasdasdasdasdasdaddasda13123123asdasdasdasdasdasdrueba</h6>
+                            <div class="node-step"></div>
+                    </li>
+                    <li test-id='83' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title="LoginSteps.validateLogin(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then el resultado de la accion deberia ser ERROR al logearse</h6>
+                            <div class="node-step"></div>
                     </li>
             </ul>
         </li>
@@ -592,15 +611,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Test</span>
+						<span class='category-name'>@RecordAction</span>
 						<span class='category-status right'>
-						<span class='label fail'>4</span>
+						<span class='label pass'>7</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -614,24 +633,208 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 4, 2023 01:36:15 PM</td>
-										<td class='linked' test-id='1'>Probar la búsqueda de usuario por id</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Sep 9, 2023 02:24:15 AM</td>
+										<td class='linked' test-id='2'>Probar las posibles transacciones en el sistema.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Sep 4, 2023 01:36:15 PM</td>
-										<td class='linked' test-id='3'>Probar la búsqueda de usuario por id.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Sep 9, 2023 02:24:15 AM</td>
+										<td class='linked' test-id='3'>Probar las posibles transacciones en el sistema.Registrar una transacción.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Sep 4, 2023 01:36:16 PM</td>
-										<td class='linked' test-id='7'>Probar la búsqueda de usuario por id.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Sep 9, 2023 02:24:17 AM</td>
+										<td class='linked' test-id='7'>Probar las posibles transacciones en el sistema.Registrar una transacción.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Sep 4, 2023 01:36:16 PM</td>
-										<td class='linked' test-id='11'>Probar la búsqueda de usuario por id.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Sep 9, 2023 02:24:17 AM</td>
+										<td class='linked' test-id='11'>Probar las posibles transacciones en el sistema.Registrar una transacción.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:17 AM</td>
+										<td class='linked' test-id='15'>Probar las posibles transacciones en el sistema.Registrar una transacción.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:18 AM</td>
+										<td class='linked' test-id='19'>Probar las posibles transacciones en el sistema.Registrar una transacción.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:18 AM</td>
+										<td class='linked' test-id='23'>Probar las posibles transacciones en el sistema.Registrar una transacción.Registrar una transacción</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@GetUserById</span>
+						<span class='category-status right'>
+						<span class='label pass'>5</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 9, 2023 02:24:18 AM</td>
+										<td class='linked' test-id='28'>Probar CRUD de Usuarios.Búsqueda de usuario por id</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:18 AM</td>
+										<td class='linked' test-id='29'>Probar CRUD de Usuarios.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:18 AM</td>
+										<td class='linked' test-id='33'>Probar CRUD de Usuarios.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:18 AM</td>
+										<td class='linked' test-id='37'>Probar CRUD de Usuarios.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:19 AM</td>
+										<td class='linked' test-id='41'>Probar CRUD de Usuarios.Búsqueda de usuario por id.Búsqueda de usuario por id</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@CreateUser</span>
+						<span class='category-status right'>
+						<span class='label pass'>8</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 8</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 9, 2023 02:24:19 AM</td>
+										<td class='linked' test-id='45'>Probar CRUD de Usuarios.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:19 AM</td>
+										<td class='linked' test-id='46'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:20 AM</td>
+										<td class='linked' test-id='50'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:20 AM</td>
+										<td class='linked' test-id='54'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:20 AM</td>
+										<td class='linked' test-id='58'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:20 AM</td>
+										<td class='linked' test-id='62'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:20 AM</td>
+										<td class='linked' test-id='66'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:20 AM</td>
+										<td class='linked' test-id='70'>Probar CRUD de Usuarios.Creacion de usuario.Creacion de usuario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Login</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 9, 2023 02:24:21 AM</td>
+										<td class='linked' test-id='74'>Probar CRUD de Usuarios.login</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:21 AM</td>
+										<td class='linked' test-id='75'>Probar CRUD de Usuarios.login.login</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:22 AM</td>
+										<td class='linked' test-id='78'>Probar CRUD de Usuarios.login.login</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 9, 2023 02:24:22 AM</td>
+										<td class='linked' test-id='81'>Probar CRUD de Usuarios.login.login</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -647,388 +850,7 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.net.ConnectException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 4, 2023 01:36:15 PM</td>
-										<td class='linked' test-id='5'>Probar la búsqueda de usuario por id.Búsqueda de usuario por id.Búsqueda de usuario por id.When busco un usuario por el id 3</td>
-										<td>
-											<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)
-	at ✽.busco un usuario por el id 3(src/test/resources/features/Login.feature:8)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Sep 4, 2023 01:36:16 PM</td>
-										<td class='linked' test-id='9'>Probar la búsqueda de usuario por id.Búsqueda de usuario por id.Búsqueda de usuario por id.When busco un usuario por el id 4</td>
-										<td>
-											<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)
-	at ✽.busco un usuario por el id 4(src/test/resources/features/Login.feature:8)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Sep 4, 2023 01:36:16 PM</td>
-										<td class='linked' test-id='13'>Probar la búsqueda de usuario por id.Búsqueda de usuario por id.Búsqueda de usuario por id.When busco un usuario por el id 1</td>
-										<td>
-											<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
-	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
-	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
-	at io.restassured.filter.Filter$filter.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
-	at io.restassured.filter.FilterContext$next.call(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
-	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
-	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
-	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at steps.LoginSteps.enterSearchCriteria(LoginSteps.java:25)
-	at ✽.busco un usuario por el id 1(src/test/resources/features/Login.feature:8)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -1036,37 +858,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>20</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>57</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 4, 2023 01:36:15 PM</div>
+					<div class='panel-lead'>Sep 9, 2023 02:24:14 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 4, 2023 01:36:16 PM</div>
+			 		<div class='panel-lead'>Sep 9, 2023 02:24:22 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 1s+494ms</div>
+					<div class='panel-lead'>0h 0m 7s+448ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1082,12 +904,39 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Test</td>
+							<td>@RecordAction</td>
+							<td>7</td>
 							<td>0</td>
-							<td>4</td>
 							<td>0</td>
 							<td>
-									0%
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@GetUserById</td>
+							<td>5</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@CreateUser</td>
+							<td>8</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Login</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
 							</td>
 						</tr>
 					</table>
@@ -1101,39 +950,39 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+                parentCount: 2,
+				passParent: 2,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
-				childCount: 3,
-				passChild: 0,
-				failChild: 3,
+				exceptionsParent: 0,
+				childCount: 20,
+				passChild: 20,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 3,
-				grandChildCount: 9,
-				passGrandChild: 3,
-				failGrandChild: 3,
+				exceptionsChild: 0,
+				grandChildCount: 57,
+				passGrandChild: 57,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 6,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Probar la búsqueda de usuario por id":1.303
+			        "Probar las posibles transacciones en el sistema":3.649,"Probar CRUD de Usuarios":3.619
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
